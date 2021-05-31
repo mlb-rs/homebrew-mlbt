@@ -1,0 +1,16 @@
+name: brew
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  brew-install:
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check
+        run: brew install --build-bottle --verbose ./mlbt.rb
