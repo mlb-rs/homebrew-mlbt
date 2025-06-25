@@ -1,10 +1,10 @@
 class Mlbt < Formula
   desc "Interact with MLB's Statcast API and even watch a live game ⚾"
   homepage "https://github.com/mlb-rs/mlbt"
-  version "v0.0.15"
+  version "v0.0.16"
   license "MIT"
   url "https://github.com/mlb-rs/mlbt/releases/download/#{version}/mlbt-macos.tar.gz"
-  sha256 "4726d592ef6a95bb55acb49103089c6d0a83b6ce6842f4ba314458570862f921"
+  sha256 "c1653723bc548041ea8a555d5a60eba00d4c957cc4e115ab23aaa812ff139a7f"
 
   def install
     bin.install "mlbt"
