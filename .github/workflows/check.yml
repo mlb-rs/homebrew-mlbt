@@ -10,7 +10,11 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Check
-        run: brew install --build-bottle --verbose ./mlbt.rb
+        run: |
+          TAP_PATH=$(brew --repository)/Library/Taps/mlb-rs/homebrew-mlbt
+          mkdir -p "$TAP_PATH"
+          cp ./mlbt.rb "$TAP_PATH/mlbt.rb"
+          brew install mlb-rs/mlbt/mlbt
