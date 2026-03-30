@@ -1,28 +1,28 @@
 class Mlbt < Formula
   desc "Interact with MLB's Statcast API and even watch a live baseball game in your terminal."
   homepage "https://github.com/mlb-rs/mlbt"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-aarch64-apple-darwin.tar.gz"
-      sha256 "ded5ff6334ce900fb3f73165ff50213d50defb70158fde749eba359f5421ac6d"
+      sha256 "759be47f2b066086258cf531405c13c9de65a5442fb5819df9c0d8eb139f391b"
     end
     on_intel do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-x86_64-apple-darwin.tar.gz"
-      sha256 "42671746a751db0e876e7f525af28dcb55d9cd8c6be4cc27f474a6712101d8de"
+      sha256 "14e27b908470bd02c7f7d55a1619f7ef871487009da8cf97deb0b519fbb9c823"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "35465992ff876158c1442a9a89c3993af964bdb5da4c9f733f5e4487a5d9ec31"
+      sha256 "3ef4429c529f6b531627df7ca314ed62a18b814b651673c3ce624acfc7f49b89"
     end
     on_intel do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "71d41196c781562094b3c244dec64fc0ac1772fb5408ac29d39c3007c58dba4c"
+      sha256 "bf8e6b55d53aae7dfafdd6aaf1b98d7fd064f04e0737c08158b2af0121f593a0"
     end
   end
 
@@ -37,6 +37,6 @@ class Mlbt < Formula
   end
 
   test do
-    assert_predicate bin/"mlbt", :executable?
+    assert_match version.to_s, shell_output("#{bin}/mlbt --version")
   end
 end
