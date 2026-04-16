@@ -1,28 +1,28 @@
 class Mlbt < Formula
   desc "Interact with MLB's Statcast API and even watch a live baseball game in your terminal."
   homepage "https://github.com/mlb-rs/mlbt"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-aarch64-apple-darwin.tar.gz"
-      sha256 "759be47f2b066086258cf531405c13c9de65a5442fb5819df9c0d8eb139f391b"
+      sha256 "99790d487330a238182580e843e21199d150be56a016e253a94a113f870b5a8d"
     end
     on_intel do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-x86_64-apple-darwin.tar.gz"
-      sha256 "14e27b908470bd02c7f7d55a1619f7ef871487009da8cf97deb0b519fbb9c823"
+      sha256 "4088c721f3071f117a2040a72f0a82bd5820f7e3044866804354e965714b0175"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3ef4429c529f6b531627df7ca314ed62a18b814b651673c3ce624acfc7f49b89"
+      sha256 "b9b80c9563a236bb6c6809104b7620ae365372a6ad5529ff966064c561714223"
     end
     on_intel do
       url "https://github.com/mlb-rs/mlbt/releases/download/v#{version}/mlbt-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bf8e6b55d53aae7dfafdd6aaf1b98d7fd064f04e0737c08158b2af0121f593a0"
+      sha256 "798b1f6e3610f3f72f5158b90a938f0865070d4e5a6d7aa19d3b805528f15e96"
     end
   end
 
